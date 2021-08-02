@@ -34,7 +34,7 @@ public class StudentController {
 		if (s != null) {
 			return new ResponseEntity<Student>(s, HttpStatus.OK);
 		} else {
-			return new ResponseEntity<String>("student with id " + id + " not found", HttpStatus.NOT_FOUND);
+			return new ResponseEntity<String>("student id " + id + " not found", HttpStatus.NOT_FOUND);
 		}
 	}
 
