@@ -68,7 +68,7 @@ public class StudentController {
 	public ResponseEntity<String> updateStudent(@RequestBody Student s) {
 
 		service.updateStudent(s);
-		return new ResponseEntity<String>("Student with id " + s.getStudentId() + " updated successfully",
+		return new ResponseEntity<String>("chaitanya " + s.getStudentId() + " updated successfully",
 				HttpStatus.CREATED);
 
 	}
