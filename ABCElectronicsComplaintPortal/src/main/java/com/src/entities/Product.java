@@ -3,6 +3,7 @@ package com.src.entities;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -12,6 +13,7 @@ import org.hibernate.validator.constraints.Range;
 @Table(name="prd_tbl") //It creates a table in database with name as prd_tbl.
 public class Product {
 	//It is required and length should be in between 5 and 10 otherwise it throws custom error message as given.
+	@Id
 	@NotNull(message = "model number is Required")
 	@Length(min = 5, max = 10,message="Length of model number should be betwwen 5 and 10")
 	private String modelNumber;
@@ -26,8 +28,7 @@ public class Product {
 	
 	private LocalDate dateofPurchase;
 	
-	//It should be in range of 1 to 10.
-	@Range(min = 1, max = 10, message="warranty years should be in range of 1 to 10")
+	
 	private int warrentyYears;
 	
 	private LocalDate warrantyDate; // should be auto generated
@@ -38,8 +39,8 @@ public class Product {
 	}
 	//Parameterized constructor
 	public Product(String modelNumber, String productName, String productCategoryName, LocalDate dateofPurchase,
-			int warrentyYears, LocalDate warrantyDate) {
-		super();
+			int warrentyYears, LocalDate warrantyDate ) {
+		
 		this.modelNumber = modelNumber;
 		this.productName = productName;
 		this.productCategoryName = productCategoryName;
@@ -94,5 +95,6 @@ public class Product {
 	// Method is used to set the warranty date.
 	public void setWarrantyDate(LocalDate warrantyDate) {
 		this.warrantyDate = warrantyDate;
-	}	
+	}
+
 }
