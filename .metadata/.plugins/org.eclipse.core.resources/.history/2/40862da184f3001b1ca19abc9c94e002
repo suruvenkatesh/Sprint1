@@ -1,0 +1,5 @@
+package com.src.exceptions;
+
+public class OutOfWarrantyException extends Exception {
+
+}
