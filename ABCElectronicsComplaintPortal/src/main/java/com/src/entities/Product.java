@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.Range;
+
 @Entity  
 @Table(name="prd_tbl") //It creates a table in database with name as prd_tbl.
 public class Product {

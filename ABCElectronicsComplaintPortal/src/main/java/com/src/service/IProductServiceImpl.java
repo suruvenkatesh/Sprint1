@@ -16,7 +16,7 @@ import com.src.repository.IProductRepository;
 public class IProductServiceImpl implements IProductService{
     @Autowired
 	IProductRepository repository;
-	@Override
+	/*@Override
 	public void addProduct(Product product) {
 		List<Product>list=repository.findAll();
 		for(Product a:list) {
@@ -68,6 +68,8 @@ public class IProductServiceImpl implements IProductService{
 	
 		return repository.getEngineersByProduct(productCategoryName);
 	}
+
+	*/
 
 	
 }

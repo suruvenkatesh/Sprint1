@@ -10,7 +10,7 @@ import com.src.entities.Product;
 import com.src.exceptions.InValidModelNumberException;
 
 public interface IProductRepository extends JpaRepository<Product, String> {
-	
+/*	
 	public void addProduct(Product product);
 	public void removeProducts(String category);
 	public List<Product> getProduct(String categoryName);
@@ -20,6 +20,6 @@ public interface IProductRepository extends JpaRepository<Product, String> {
 	public List<Complaint> getProductComplaints(String productCategoryName);
 	public List<Engineer> getEngineersByProduct(String productCategoryName);
 	
-	
+	*/
 	
 }

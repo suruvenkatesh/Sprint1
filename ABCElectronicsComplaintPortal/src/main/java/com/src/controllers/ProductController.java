@@ -24,7 +24,7 @@ import com.src.service.IProductService;
 public class ProductController {
 	@Autowired
     IProductService service;
-	
+	/*
 	@PostMapping
 	public String saveProduct(@Valid @RequestBody Product product) {
 	
@@ -48,5 +48,5 @@ public class ProductController {
 			throw new NullProductsException("No Products found");
 	return service.getProduct(categoryName);
 	}
-	
+	*/
 }
