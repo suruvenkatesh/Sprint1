@@ -1,0 +1,26 @@
+package com.src.entities;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+@Entity
+
+public class Complaint {
+	
+	@Id
+	private int complaintId;
+	private String productModelNumber; // complaint product model number, Model Number from Product Class
+	private String complaintName;
+	private String status; // open , resolve online , resolve after home visit , resolved , closed
+	// note : engineer cannot open or close the complaint
+	private String clientId; 
+	
+	@ManyToOne(cascade =  CascadeType.MERGE )
+	@JoinColumn(name = "complaint_no")
+	private int engineerId;
+
+
+}

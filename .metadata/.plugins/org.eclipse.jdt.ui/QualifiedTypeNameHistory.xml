@@ -3,4 +3,9 @@
 <fullyQualifiedTypeName name="springfox.documentation.swagger2.annotations.EnableSwagger2"/>
 <fullyQualifiedTypeName name="com.cg.exceptions.OutofWarrantyException"/>
 <fullyQualifiedTypeName name="com.src.exceptions.OutofWarrantyException"/>
+<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+<fullyQualifiedTypeName name="com.src.entities.Admin"/>
+<fullyQualifiedTypeName name="com.src.service.IAdminService"/>
+<fullyQualifiedTypeName name="com.src.repository.IAdminRepository"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 </qualifiedTypeNameHistroy>

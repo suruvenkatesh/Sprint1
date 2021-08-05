@@ -1,0 +1,66 @@
+package com.src;
+
+
+import java.time.LocalDate;
+import java.util.Optional;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import com.src.entities.Engineer;
+import com.src.entities.Product;
+import com.src.repository.IEngineerRepository;
+import com.src.repository.IProductRepository;
+import com.src.service.IProductServiceImpl;
+@Component
+public class DBInit implements CommandLineRunner {
+
+	@Autowired
+	IProductServiceImpl repo;
+	
+	@Autowired
+	IProductRepository r;
+	@Autowired
+	IEngineerRepository repo1;
+	
+	Logger logger = LoggerFactory.getLogger(DBInit.class);
+	
+	@Override
+	public void run(String... args) throws Exception {
+		
+		logger.info("H2 datbase product created");
+
+		Product p=new Product();
+		p.setProductName("fan");
+		p.setModelNumber("IME45654");
+        p.setProductCategoryName("Electrical");
+        p.setDateofPurchase(LocalDate.now());
+        p.setWarrantyDate(LocalDate.of(2030, 10, 12));
+        p.setWarrentyYears(6);
+        r.save(p);
+        
+    	p.setProductName("mixer");
+		p.setModelNumber("IME123546");
+        p.setProductCategoryName("Electrical");
+        p.setDateofPurchase(LocalDate.now());
+        
+        p.setWarrentyYears(4);
+        p.setWarrantyDate(p.getDateofPurchase().plusYears(p.getWarrentyYears()));
+        r.save(p);
+
+
+		logger.info("2 products inserted into database");
+	
+		
+		
+		Optional<Engineer> e = repo1.findById(100);
+		System.out.println(e);
+
+		
+
+	}
+	
+}
