@@ -8,7 +8,7 @@ import com.src.exceptions.InvalidClientIdException;
 import com.src.exceptions.InvalidEngineerIdException;
 
 public interface IUserRepository {
-
+/*
 	public void saveClient(Client c);
 	public Client getClientByCLientId(String clientId)throws InvalidClientIdException ;
 	
@@ -19,5 +19,5 @@ public interface IUserRepository {
 	
 	public Client signIn(Client client);
 	public Client signOut(Client client);
-
+*/
 }
