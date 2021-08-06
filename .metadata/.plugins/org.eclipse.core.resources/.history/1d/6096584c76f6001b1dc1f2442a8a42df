@@ -22,7 +22,7 @@ public interface IComplaintService {
 	public List<Complaint> getClientAllOpenComplaints(Client client);
 	
 	public Engineer getEngineer(int complaintId)throws InValidComplaintIdException;
-	public Product getProductByComplaint(int complaintId)throws InValidComplaintIdException;
+	public Complaint getProductByComplaint(int complaintId)throws InValidComplaintIdException;
 	
 }
 

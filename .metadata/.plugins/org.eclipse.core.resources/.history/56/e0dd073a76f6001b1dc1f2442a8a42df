@@ -35,7 +35,7 @@ public class ComplaintController {
 		
 		@PostMapping("/bookComplaint")
 		public ResponseEntity<?> bookComplaint(@PathVariable Client client,@PathVariable Complaint complaint,@PathVariable Product product)throws OutofWarrantyException{
-		  boolean complaintobj = complaintService.bookComplaint(client, complaint, product);
+		  boolean complaintobj = complaintService.bookComplaint( complaint);
 			return new ResponseEntity<>(complaintobj,HttpStatus.CREATED) ;
 		}
 		@PutMapping("{complaintId}/{status}")

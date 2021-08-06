@@ -77,21 +77,29 @@ public class IComplaintSeviceImpl implements IComplaintService {
 	@Override
 	public List<Complaint> getClientAllOpenComplaints(Client client) {
 		
-		List<Complaint> list = new ArrayList<>() ;
+		List<Complaint> list = complaintRepository.findAll();
+		
+		
+		
+		
 		
 		List<Complaint> list1 = new ArrayList<>();
 		
-		for(Complaint c : complaintRepository.findAll()) {
+		for(Complaint c :list) {
 		if (c.getStatus() == "open") {
 		list.add(c);
 		}
 		}
 		
-//		for(Complaint c:list) {
-//			if(c.getComplaintId() == client.getClientId());
-//			
-//		}
-				
+		for(Complaint c:list) {
+			if(c.getComplaintId() == client.getClientId());
+			
+		}
+		
+		
+		
+		
+		
 		return list;
 	}
 	@Override
@@ -109,14 +117,11 @@ public class IComplaintSeviceImpl implements IComplaintService {
 			
 	@Override
 	public Product getProductByComplaint(int complaintId) throws InValidComplaintIdException {
-		Optional<Complaint> complaint = complaintRepository.findById(complaintId);
-		Product product =new Product();
-		if (complaint.isPresent()) {
-//	product =	productRepository.findById(complaint.get().getProductModelNumber());
-		return product;
-		}
-		else {
-				throw new InValidComplaintIdException();
-	}
+//		Optional<Complaint> complaint = complaintRepository.findById(complaintId);
+//		if (complaint.isPresent()) {
+//		return 	productRepository.findById(complaint.get().getProductModelNumber());
+//		}else {
+//						throw new InValidComplaintIdException();
+//}
 	}
 	}

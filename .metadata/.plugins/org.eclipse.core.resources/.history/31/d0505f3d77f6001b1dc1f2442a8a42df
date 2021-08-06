@@ -114,9 +114,9 @@ public class IComplaintSeviceImpl implements IComplaintService {
 		if (complaint.isPresent()) {
 //	product =	productRepository.findById(complaint.get().getProductModelNumber());
 		return product;
+		}else {
+						throw new InValidComplaintIdException();
+return product;
 		}
-		else {
-				throw new InValidComplaintIdException();
-	}
 	}
 	}

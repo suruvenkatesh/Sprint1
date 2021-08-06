@@ -118,5 +118,6 @@ public class IComplaintSeviceImpl implements IComplaintService {
 		else {
 				throw new InValidComplaintIdException();
 	}
+		return product;
 	}
 	}

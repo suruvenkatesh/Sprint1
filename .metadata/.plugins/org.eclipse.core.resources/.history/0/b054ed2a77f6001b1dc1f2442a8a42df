@@ -109,14 +109,11 @@ public class IComplaintSeviceImpl implements IComplaintService {
 			
 	@Override
 	public Product getProductByComplaint(int complaintId) throws InValidComplaintIdException {
-		Optional<Complaint> complaint = complaintRepository.findById(complaintId);
-		Product product =new Product();
-		if (complaint.isPresent()) {
-//	product =	productRepository.findById(complaint.get().getProductModelNumber());
-		return product;
-		}
-		else {
-				throw new InValidComplaintIdException();
-	}
+//		Optional<Complaint> complaint = complaintRepository.findById(complaintId);
+//		if (complaint.isPresent()) {
+//		return 	productRepository.findById(complaint.get().getProductModelNumber());
+//		}else {
+//						throw new InValidComplaintIdException();
+//}
 	}
 	}
