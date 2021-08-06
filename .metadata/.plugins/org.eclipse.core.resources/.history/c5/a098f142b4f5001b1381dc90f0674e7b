@@ -1,0 +1,11 @@
+package com.src.entities;
+
+public class Admin {
+
+	private int adminId; // work like as employee id
+	private String password;
+	private long contactNumber;
+	private String emailId;
+	
+	
+}
